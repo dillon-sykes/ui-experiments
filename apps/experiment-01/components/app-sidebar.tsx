@@ -16,12 +16,12 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar";
 import {
-  RiBrainLine,
+  RiScanLine,
   RiBardLine,
-  RiFileTextLine,
+  RiUserFollowLine,
   RiCodeSSlashLine,
-  RiBarChart3Line,
-  RiSettingsLine,
+  RiLoginCircleLine,
+  RiLayoutLeftLine,
   RiSettings3Line,
   RiLeafLine,
   RiLogoutBoxLine,
@@ -31,67 +31,72 @@ import {
 const data = {
   teams: [
     {
-      name: "Job Matcher AI",
+      name: "InnovaCraft",
       logo: "https://raw.githubusercontent.com/origin-space/origin-images/refs/heads/main/exp1/logo-01_kp2j8x.png",
     },
     {
-      name: "Career Intelligence",
+      name: "Acme Corp.",
       logo: "https://raw.githubusercontent.com/origin-space/origin-images/refs/heads/main/exp1/logo-01_kp2j8x.png",
     },
     {
-      name: "AI Analytics",
+      name: "Evil Corp.",
       logo: "https://raw.githubusercontent.com/origin-space/origin-images/refs/heads/main/exp1/logo-01_kp2j8x.png",
     },
   ],
   navMain: [
     {
-      title: "Analysis",
+      title: "Sections",
       url: "#",
       items: [
         {
           title: "Dashboard",
           url: "#",
-          icon: RiBrainLine,
-          isActive: true,
+          icon: RiScanLine,
         },
         {
-          title: "Job Analysis",
+          title: "Insights",
           url: "#",
           icon: RiBardLine,
         },
         {
-          title: "Resume Manager",
+          title: "Contacts",
           url: "#",
-          icon: RiFileTextLine,
+          icon: RiUserFollowLine,
+          isActive: true,
         },
         {
-          title: "Analytics",
-          url: "#",
-          icon: RiBarChart3Line,
-        },
-        {
-          title: "API & Tools",
+          title: "Tools",
           url: "#",
           icon: RiCodeSSlashLine,
+        },
+        {
+          title: "Integration",
+          url: "#",
+          icon: RiLoginCircleLine,
+        },
+        {
+          title: "Layouts",
+          url: "#",
+          icon: RiLayoutLeftLine,
+        },
+        {
+          title: "Reports",
+          url: "#",
+          icon: RiLeafLine,
         },
       ],
     },
     {
-      title: "Settings",
+      title: "Other",
       url: "#",
       items: [
         {
-          title: "Preferences",
+          title: "Settings",
           url: "#",
           icon: RiSettings3Line,
         },
         {
-          title: "Chrome Extension",
-          url: "#",
-          icon: RiSettingsLine,
-        },
-        {
-          title: "Support",
+          title: "Help Center",
           url: "#",
           icon: RiLeafLine,
         },
