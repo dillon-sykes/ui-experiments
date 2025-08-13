@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Experiment 01 - Crafted.is",
+  title: "Job Matcher - AI-Powered Career Intelligence",
 };
 
 import { AppSidebar } from "@/components/app-sidebar";
@@ -22,8 +22,8 @@ import {
 import { Button } from "@/components/ui/button";
 import UserDropdown from "@/components/user-dropdown";
 import FeedbackDialog from "@/components/feedback-dialog";
-import ContactsTable from "@/components/contacts-table";
-import { RiScanLine } from "@remixicon/react";
+import JobAnalysisTable from "@/components/job-analysis-table";
+import { RiBrainLine } from "@remixicon/react";
 import { StatsGrid } from "@/components/stats-grid";
 
 export default function Page() {
@@ -42,13 +42,13 @@ export default function Page() {
               <BreadcrumbList>
                 <BreadcrumbItem className="hidden md:block">
                   <BreadcrumbLink href="#">
-                    <RiScanLine size={22} aria-hidden="true" />
+                    <RiBrainLine size={22} aria-hidden="true" />
                     <span className="sr-only">Dashboard</span>
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="hidden md:block" />
                 <BreadcrumbItem>
-                  <BreadcrumbPage>Contacts</BreadcrumbPage>
+                  <BreadcrumbPage>Job Analysis</BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
@@ -62,22 +62,21 @@ export default function Page() {
           {/* Page intro */}
           <div className="flex items-center justify-between gap-4">
             <div className="space-y-1">
-              <h1 className="text-2xl font-semibold">Oilà, Larry!</h1>
+              <h1 className="text-2xl font-semibold">Welcome back, Sarah!</h1>
               <p className="text-sm text-muted-foreground">
-                Here&rsquo;s an overview of your contacts. Manage or create new
-                ones with ease!
+                Here&rsquo;s your AI-powered job matching dashboard. Analyze new opportunities and track your career progress.
               </p>
             </div>
-            <Button className="px-3">Add Contact</Button>
+            <Button className="px-3">Upload Resume</Button>
           </div>
-          {/* Numbers */}
+          {/* Analytics */}
           <StatsGrid
             stats={[
               {
-                title: "Connections",
-                value: "427,296",
+                title: "Jobs Analyzed",
+                value: "127",
                 change: {
-                  value: "+12%",
+                  value: "+23%",
                   trend: "up",
                 },
                 icon: (
@@ -92,10 +91,10 @@ export default function Page() {
                 ),
               },
               {
-                title: "Contacts",
-                value: "37,429",
+                title: "Good Matches",
+                value: "42",
                 change: {
-                  value: "+42%",
+                  value: "+18%",
                   trend: "up",
                 },
                 icon: (
@@ -105,15 +104,15 @@ export default function Page() {
                     height={19}
                     fill="currentColor"
                   >
-                    <path d="M2 9.5c0 .313.461.858 1.53 1.393C4.914 11.585 6.877 12 9 12c2.123 0 4.086-.415 5.47-1.107C15.538 10.358 16 9.813 16 9.5V7.329C14.35 8.349 11.827 9 9 9s-5.35-.652-7-1.671V9.5Zm14 2.829C14.35 13.349 11.827 14 9 14s-5.35-.652-7-1.671V14.5c0 .313.461.858 1.53 1.393C4.914 16.585 6.877 17 9 17c2.123 0 4.086-.415 5.47-1.107 1.069-.535 1.53-1.08 1.53-1.393v-2.171ZM0 14.5v-10C0 2.015 4.03 0 9 0s9 2.015 9 4.5v10c0 2.485-4.03 4.5-9 4.5s-9-2.015-9-4.5ZM9 7c2.123 0 4.086-.415 5.47-1.107C15.538 5.358 16 4.813 16 4.5c0-.313-.461-.858-1.53-1.393C13.085 2.415 11.123 2 9 2c-2.123 0-4.086.415-5.47 1.107C2.461 3.642 2 4.187 2 4.5c0 .313.461.858 1.53 1.393C4.914 6.585 6.877 7 9 7Z" />
+                    <path d="M9 0c5.523 0 10 4.477 10 10s-4.477 10-10 10S-1 15.523-1 10 3.477 0 9 0Zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm3.833 3.337a.596.596 0 0 1 .763.067.59.59 0 0 1 .063.76c-2.18 3.046-3.38 4.678-3.598 4.897a1.5 1.5 0 0 1-2.122-2.122c.374-.373 2.005-1.574 4.894-3.602ZM15.5 9a1 1 0 1 1 0 2 1 1 0 0 1 0-2Zm-11 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2Zm2.318-3.596a1 1 0 1 1-1.414 1.414 1 1 0 0 1 1.414-1.414ZM10 3.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" />
                   </svg>
                 ),
               },
               {
-                title: "Value",
-                value: "$82,439",
+                title: "Match Rate",
+                value: "78%",
                 change: {
-                  value: "+37%",
+                  value: "+12%",
                   trend: "up",
                 },
                 icon: (
@@ -128,11 +127,11 @@ export default function Page() {
                 ),
               },
               {
-                title: "Referrals",
-                value: "3,497",
+                title: "Avg Score",
+                value: "84.2",
                 change: {
-                  value: "-17%",
-                  trend: "down",
+                  value: "+5.3",
+                  trend: "up",
                 },
                 icon: (
                   <svg
@@ -141,7 +140,7 @@ export default function Page() {
                     height={21}
                     fill="currentColor"
                   >
-                    <path d="m14.142.147 6.347 6.346a.5.5 0 0 1-.277.848l-1.474.23-5.656-5.657.212-1.485a.5.5 0 0 1 .848-.282ZM2.141 19.257c3.722-3.33 7.995-4.327 12.643-5.52l.446-4.017-4.297-4.298-4.018.447c-1.192 4.648-2.189 8.92-5.52 12.643L0 17.117c2.828-3.3 3.89-6.953 5.303-13.081l6.364-.708 5.657 5.657-.707 6.364c-6.128 1.415-9.782 2.475-13.081 5.304L2.14 19.258Zm5.284-6.029a2 2 0 1 1 2.828-2.828 2 2 0 0 1-2.828 2.828Z" />
+                    <path d="M10.5 0c5.799 0 10.5 4.701 10.5 10.5S16.299 21 10.5 21 0 16.299 0 10.5 4.701 0 10.5 0Zm0 2C5.806 2 2 5.806 2 10.5S5.806 19 10.5 19s8.5-3.806 8.5-8.5S15.194 2 10.5 2Zm4.5 8.5a1 1 0 0 1 0 2h-4a1 1 0 0 1-1-1V6a1 1 0 0 1 2 0v4.5H15Z" />
                   </svg>
                 ),
               },
@@ -149,7 +148,7 @@ export default function Page() {
           />
           {/* Table */}
           <div className="min-h-[100vh] flex-1 md:min-h-min">
-            <ContactsTable />
+            <JobAnalysisTable />
           </div>
         </div>
       </SidebarInset>
