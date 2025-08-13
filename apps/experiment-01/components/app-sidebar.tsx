@@ -16,14 +16,16 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar";
 import {
-  RiScanLine,
+  RiBrainLine,
   RiBardLine,
-  RiUserFollowLine,
+  RiFileTextLine,
   RiCodeSSlashLine,
-  RiLoginCircleLine,
-  RiLayoutLeftLine,
+  RiBarChartBoxLine,
+  RiSettingsLine,
   RiSettings3Line,
   RiLeafLine,
+  RiUploadLine,
+  RiExtensionLine,
   RiLogoutBoxLine,
 } from "@remixicon/react";
 
@@ -31,69 +33,64 @@ import {
 const data = {
   teams: [
     {
-      name: "InnovaCraft",
+      name: "Job Matcher",
       logo: "https://raw.githubusercontent.com/origin-space/origin-images/refs/heads/main/exp1/logo-01_kp2j8x.png",
     },
     {
-      name: "Acme Corp.",
+      name: "Career AI",
       logo: "https://raw.githubusercontent.com/origin-space/origin-images/refs/heads/main/exp1/logo-01_kp2j8x.png",
     },
     {
-      name: "Evil Corp.",
+      name: "TalentMatch",
       logo: "https://raw.githubusercontent.com/origin-space/origin-images/refs/heads/main/exp1/logo-01_kp2j8x.png",
     },
   ],
   navMain: [
     {
-      title: "Sections",
+      title: "Analysis",
       url: "#",
       items: [
         {
           title: "Dashboard",
           url: "#",
-          icon: RiScanLine,
+          icon: RiBrainLine,
+          isActive: true,
         },
         {
-          title: "Insights",
+          title: "Job Analysis",
           url: "#",
           icon: RiBardLine,
         },
         {
-          title: "Contacts",
+          title: "Resume",
           url: "#",
-          icon: RiUserFollowLine,
-          isActive: true,
+          icon: RiFileTextLine,
         },
         {
-          title: "Tools",
+          title: "Analytics",
           url: "#",
-          icon: RiCodeSSlashLine,
+          icon: RiBarChartBoxLine,
         },
         {
-          title: "Integration",
+          title: "Chrome Extension",
           url: "#",
-          icon: RiLoginCircleLine,
+          icon: RiExtensionLine,
         },
         {
-          title: "Layouts",
+          title: "Upload Resume",
           url: "#",
-          icon: RiLayoutLeftLine,
-        },
-        {
-          title: "Reports",
-          url: "#",
-          icon: RiLeafLine,
+          icon: RiUploadLine,
         },
       ],
     },
     {
-      title: "Other",
+      title: "Settings",
       url: "#",
       items: [
         {
           title: "Settings",
           url: "#",
-          icon: RiSettings3Line,
+          icon: RiSettingsLine,
         },
         {
           title: "Help Center",
