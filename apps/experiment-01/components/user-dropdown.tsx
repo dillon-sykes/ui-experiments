@@ -31,10 +31,10 @@ export default function UserDropdown() {
       <DropdownMenuContent className="max-w-64" align="end">
         <DropdownMenuLabel className="flex min-w-0 flex-col">
           <span className="truncate text-sm font-medium text-foreground">
-            Keith Kennedy
+            Sarah Johnson
           </span>
           <span className="truncate text-xs font-normal text-muted-foreground">
-            k.kennedy@originui.com
+            sarah.johnson@email.com
           </span>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
@@ -49,7 +49,7 @@ export default function UserDropdown() {
           </DropdownMenuItem>
           <DropdownMenuItem>
             <RiTeamLine size={16} className="opacity-60" aria-hidden="true" />
-            <span>Affiliate area</span>
+            <span>Career Profile</span>
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
