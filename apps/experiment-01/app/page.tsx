@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Job Matcher - AI-Powered Career Intelligence",
+  title: "Experiment 01 - Crafted.is",
 };
 
 import { AppSidebar } from "@/components/app-sidebar";
@@ -22,8 +22,8 @@ import {
 import { Button } from "@/components/ui/button";
 import UserDropdown from "@/components/user-dropdown";
 import FeedbackDialog from "@/components/feedback-dialog";
-import JobAnalysisTable from "@/components/job-analysis-table";
-import { RiBrainLine } from "@remixicon/react";
+import ContactsTable from "@/components/contacts-table";
+import { RiScanLine } from "@remixicon/react";
 import { StatsGrid } from "@/components/stats-grid";
 
 export default function Page() {
@@ -42,13 +42,13 @@ export default function Page() {
               <BreadcrumbList>
                 <BreadcrumbItem className="hidden md:block">
                   <BreadcrumbLink href="#">
-                    <RiBrainLine size={22} aria-hidden="true" />
+                    <RiScanLine size={22} aria-hidden="true" />
                     <span className="sr-only">Dashboard</span>
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="hidden md:block" />
                 <BreadcrumbItem>
-                  <BreadcrumbPage>Job Analysis</BreadcrumbPage>
+                  <BreadcrumbPage>Contacts</BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
@@ -62,21 +62,22 @@ export default function Page() {
           {/* Page intro */}
           <div className="flex items-center justify-between gap-4">
             <div className="space-y-1">
-              <h1 className="text-2xl font-semibold">Welcome back, Alex!</h1>
+              <h1 className="text-2xl font-semibold">Oilà, Larry!</h1>
               <p className="text-sm text-muted-foreground">
-                Track your job applications and discover perfect career matches with AI-powered analysis.
+                Here&rsquo;s an overview of your contacts. Manage or create new
+                ones with ease!
               </p>
             </div>
-            <Button className="px-3">Upload Resume</Button>
+            <Button className="px-3">Add Contact</Button>
           </div>
           {/* Numbers */}
           <StatsGrid
             stats={[
               {
-                title: "Jobs Analyzed",
-                value: "127",
+                title: "Connections",
+                value: "427,296",
                 change: {
-                  value: "+23%",
+                  value: "+12%",
                   trend: "up",
                 },
                 icon: (
@@ -91,10 +92,10 @@ export default function Page() {
                 ),
               },
               {
-                title: "Good Matches",
-                value: "42",
+                title: "Contacts",
+                value: "37,429",
                 change: {
-                  value: "+18%",
+                  value: "+42%",
                   trend: "up",
                 },
                 icon: (
@@ -104,15 +105,15 @@ export default function Page() {
                     height={19}
                     fill="currentColor"
                   >
-                    <path d="M8.53547 0.62293C8.88226 0.849446 8.97976 1.3142 8.75325 1.66099L4.5083 8.1599C4.38833 8.34356 4.19397 8.4655 3.9764 8.49358C3.75883 8.52167 3.53987 8.45309 3.3772 8.30591L0.616113 5.80777C0.308959 5.52987 0.285246 5.05559 0.563148 4.74844C0.84105 4.44128 1.31533 4.41757 1.62249 4.69547L3.73256 6.60459L7.49741 0.840706C7.72393 0.493916 8.18868 0.396414 8.53547 0.62293Z" />
+                    <path d="M2 9.5c0 .313.461.858 1.53 1.393C4.914 11.585 6.877 12 9 12c2.123 0 4.086-.415 5.47-1.107C15.538 10.358 16 9.813 16 9.5V7.329C14.35 8.349 11.827 9 9 9s-5.35-.652-7-1.671V9.5Zm14 2.829C14.35 13.349 11.827 14 9 14s-5.35-.652-7-1.671V14.5c0 .313.461.858 1.53 1.393C4.914 16.585 6.877 17 9 17c2.123 0 4.086-.415 5.47-1.107 1.069-.535 1.53-1.08 1.53-1.393v-2.171ZM0 14.5v-10C0 2.015 4.03 0 9 0s9 2.015 9 4.5v10c0 2.485-4.03 4.5-9 4.5s-9-2.015-9-4.5ZM9 7c2.123 0 4.086-.415 5.47-1.107C15.538 5.358 16 4.813 16 4.5c0-.313-.461-.858-1.53-1.393C13.085 2.415 11.123 2 9 2c-2.123 0-4.086.415-5.47 1.107C2.461 3.642 2 4.187 2 4.5c0 .313.461.858 1.53 1.393C4.914 6.585 6.877 7 9 7Z" />
                   </svg>
                 ),
               },
               {
-                title: "Match Rate",
-                value: "78%",
+                title: "Value",
+                value: "$82,439",
                 change: {
-                  value: "+12%",
+                  value: "+37%",
                   trend: "up",
                 },
                 icon: (
@@ -127,11 +128,11 @@ export default function Page() {
                 ),
               },
               {
-                title: "Applications",
-                value: "34",
+                title: "Referrals",
+                value: "3,497",
                 change: {
-                  value: "+8%",
-                  trend: "up",
+                  value: "-17%",
+                  trend: "down",
                 },
                 icon: (
                   <svg
@@ -148,7 +149,7 @@ export default function Page() {
           />
           {/* Table */}
           <div className="min-h-[100vh] flex-1 md:min-h-min">
-            <JobAnalysisTable />
+            <ContactsTable />
           </div>
         </div>
       </SidebarInset>
